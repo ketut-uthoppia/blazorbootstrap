@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/blazor.bootstrap.css",
+    "inputFile": "wwwroot-src/blazor.bootstrap.scss"
+  },
+  {
+    "outputFile": "wwwroot/bootstrap-5.3.3-uthoppia.css",
+    "inputFile": "wwwroot-src/bootstrap-5.3.3-uthoppia.scss"
+  }
+]

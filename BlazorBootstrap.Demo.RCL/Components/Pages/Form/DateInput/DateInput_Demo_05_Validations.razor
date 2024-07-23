@@ -1,35 +1,22 @@
 ﻿@using System.ComponentModel.DataAnnotations
 
-<style>
-    .valid.modified:not([type=checkbox]) {
-        outline: 1px solid #26b050;
-    }
-
-    .invalid {
-        outline: 1px solid red;
-    }
-
-    .validation-message {
-        color: red;
-    }
-</style>
-
-<EditForm EditContext="@editContext" OnValidSubmit="HandleOnValidSubmit" novalidate>
+<EditForm EditContext="@editContext" OnInvalidSubmit="HandleOnInvalidSubmit" OnValidSubmit="HandleOnValidSubmit" class="@FormClass" novalidate>
     <DataAnnotationsValidator />
 
-    <div class="form-group row mb-3">
-        <label class="col-md-2 col-form-label">Invoice Date: <span class="text-danger">*</span></label>
-        <div class="col-md-10">
-            <DateInput TValue="DateOnly?" @bind-Value="invoice.InvoiceDate" />
-            <ValidationMessage For="@(() => invoice.InvoiceDate)" />
+    <div class="mb-3">
+        <label class="form-label">Date</label>
+        <div class="form-group">
+            <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+            <DateInput TValue="DateOnly?" @bind-Value="invoice.InvoiceDate" Placeholder="Enter Date" onfocus="this.showPicker()" />
+            <ValidationMessage For="@(() => invoice.InvoiceDate)" class="invalid-feedback" />
         </div>
     </div>
 
     <div class="form-group row mb-3">
         <label class="col-md-2 col-form-label">Customer Name: <span class="text-danger">*</span></label>
         <div class="col-md-10">
-            <InputText class="form-control" @bind-Value="invoice.CustomerName" Placeholder="Enter Customer Name" />
-            <ValidationMessage For="@(() => invoice.CustomerName)" />
+            <TextInput @bind-Value="invoice.CustomerName" Placeholder="Enter Customer Name" />
+            <ValidationMessage For="@(() => invoice.CustomerName)" class="invalid-feedback" />
         </div>
     </div>
 
@@ -44,6 +31,14 @@
 @code {
     private Invoice invoice = new();
     private EditContext? editContext;
+    private bool isPristineForm = true; 
+    private string FormClass
+    {
+        get
+        {
+            return isPristineForm ? "needs-validation" : "needs-validation was-validated";
+        }
+    }
 
     protected override void OnInitialized()
     {
@@ -53,12 +48,19 @@
 
     public void HandleOnValidSubmit()
     {
+        isPristineForm = false;
         Console.WriteLine($"Invoice Date: {invoice.InvoiceDate}");
         Console.WriteLine($"Customer Name: {invoice.CustomerName}");
     }
 
+    public void HandleOnInvalidSubmit()
+    {
+        isPristineForm = false;
+    }
+
     private void ResetForm()
     {
+        isPristineForm = true;
         invoice = new();
         editContext = new EditContext(invoice);
     }

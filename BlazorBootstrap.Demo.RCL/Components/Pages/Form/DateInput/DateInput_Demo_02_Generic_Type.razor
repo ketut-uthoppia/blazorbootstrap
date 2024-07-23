@@ -1,32 +1,40 @@
 ﻿<div class="mb-3">
-    <strong>DateOnly</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateOnly" @bind-Value="@date1" Placeholder="Enter Date" />
+    <label class="form-label">Date Only</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateOnly" @bind-Value="@date1" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Entered date: @date1</div>
 
 <div class="mb-3">
-    <strong>DateOnly?</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateOnly?" @bind-Value="@date2" Placeholder="Enter Date" />
+    <label class="form-label">Date Only Nullable</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateOnly?" @bind-Value="@date2" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Entered date: @date2</div>
 
 <div class="mb-3">
-    <strong>DateTime</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateTime" @bind-Value="@date3" Placeholder="Enter Date" />
+    <label class="form-label">Date Time</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateTime" @bind-Value="@date3" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Entered date: @date3</div>
 
 <div class="mb-3">
-    <strong>DateTime?</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateTime?" @bind-Value="@date4" Placeholder="Enter Date" />
+    <label class="form-label">Date Time Nullable</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateTime?" @bind-Value="@date4" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Entered date: @date4</div>
 

@@ -1,0 +1,40 @@
+﻿/* tooltip */
+.bb-tooltip-primary {
+    --bs-tooltip-bg: var(--bb-tooltip-primary);
+    --bs-tooltip-color: var(--bb-tooltip-color-white);
+}
+
+.bb-tooltip-secondary {
+    --bs-tooltip-bg: var(--bb-tooltip-secondary);
+    --bs-tooltip-color: var(--bb-tooltip-color-white);
+}
+
+.bb-tooltip-success {
+    --bs-tooltip-bg: var(--bb-tooltip-success);
+    --bs-tooltip-color: var(--bb-tooltip-color-white);
+}
+
+.bb-tooltip-danger {
+    --bs-tooltip-bg: var(--bb-tooltip-danger);
+    --bs-tooltip-color: var(--bb-tooltip-color-white);
+}
+
+.bb-tooltip-warning {
+    --bs-tooltip-bg: var(--bb-tooltip-warning);
+    --bs-tooltip-color: var(--bb-tooltip-color-dark);
+}
+
+.bb-tooltip-info {
+    --bs-tooltip-bg: var(--bb-tooltip-info);
+    --bs-tooltip-color: var(--bb-tooltip-color-dark);
+}
+
+.bb-tooltip-light {
+    --bs-tooltip-bg: var(--bb-tooltip-light);
+    --bs-tooltip-color: var(--bb-tooltip-color-dark);
+}
+
+.bb-tooltip-dark {
+    --bs-tooltip-bg: var(--bb-tooltip-dark);
+    --bs-tooltip-color: var(--bb-tooltip-color-white);
+}

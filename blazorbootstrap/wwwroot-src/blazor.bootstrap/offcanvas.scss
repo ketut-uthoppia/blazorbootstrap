@@ -1,0 +1,16 @@
+﻿/* offcanvas */
+.offcanvas-footer {
+    display: flex;
+    align-items: center;
+    padding: var(--bb-offcanvas-footer-padding-y) var(--bb-offcanvas-footer-padding-x);
+}
+
+.offcanvas-start.bb-offcanvas-sm,
+.offcanvas-end.bb-offcanvas-sm {
+    width: var(--bb-offcanvas-horizontal-width-sm);
+}
+
+.offcanvas-start.bb-offcanvas-lg,
+.offcanvas-end.bb-offcanvas-lg {
+    width: var(--bb-offcanvas-horizontal-width-lg);
+}

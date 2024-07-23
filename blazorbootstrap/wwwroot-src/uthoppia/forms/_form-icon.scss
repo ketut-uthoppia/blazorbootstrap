@@ -1,0 +1,11 @@
+﻿.form-icon {
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    font-size: 18pt;
+    color: $gray-500;
+
+    & ~ .form-control {
+        padding-left: 50px;
+    }
+}

@@ -1,38 +1,46 @@
 ﻿<div class="mb-3">
-    <strong>DateOnly</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateOnly" @bind-Value="@date1" EnableMinMax="true" Min="@min1" Max="@max1" Placeholder="Enter Date" />
+    <label class="form-label">Date Only</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateOnly" @bind-Value="@date1" EnableMinMax="true" Min="@min1" Max="@max1" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Min date: @min1</div>
 <div class="mb-3">Max date: @max1</div>
 <div class="mb-3">Entered date: @date1</div>
 
 <div class="mb-3">
-    <strong>DateOnly?</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateOnly?" @bind-Value="@date2" EnableMinMax="true" Min="@min2" Max="@max2" Placeholder="Enter Date" />
+    <label class="form-label">Date Only Nullable</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateOnly?" @bind-Value="@date2" EnableMinMax="true" Min="@min2" Max="@max2" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Min date: @min2</div>
 <div class="mb-3">Max date: @max2</div>
 <div class="mb-3">Entered date: @date2</div>
 
 <div class="mb-3">
-    <strong>DateTime</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateTime" @bind-Value="@date3" EnableMinMax="true" Min="@min3" Max="@max3" Placeholder="Enter Date" />
+    <label class="form-label">Date Time</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateTime" @bind-Value="@date3" EnableMinMax="true" Min="@min3" Max="@max3" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Min date: @min3</div>
 <div class="mb-3">Max date: @max3</div>
 <div class="mb-3">Entered date: @date3</div>
 
 <div class="mb-3">
-    <strong>DateTime?</strong>:
-</div>
-<div class="mb-3">
-    <DateInput TValue="DateTime?" @bind-Value="@date4" EnableMinMax="true" Min="@min4" Max="@max4" Placeholder="Enter Date" />
+    <label class="form-label">Date Time Nullable</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateTime?" @bind-Value="@date4" EnableMinMax="true" Min="@min4" Max="@max4" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Min date: @min4</div>
 <div class="mb-3">Max date: @max4</div>

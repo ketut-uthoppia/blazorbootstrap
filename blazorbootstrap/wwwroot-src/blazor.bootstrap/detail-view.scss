@@ -1,0 +1,8 @@
+﻿/* detail view */
+.bb-detail-view-icon svg {
+    transition: transform 0.2s ease-in-out;
+}
+
+.bb-detail-view-icon[aria-expanded="true"] svg {
+    transform: rotate(-180deg);
+}

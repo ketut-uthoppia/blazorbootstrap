@@ -12,6 +12,8 @@ public partial class Demo : ComponentBase
 
     private string? snippet;
 
+    private string? snippetHtml;
+
     /// <summary>
     /// A reference to this component instance for use in JavaScript calls.
     /// </summary>
@@ -40,23 +42,31 @@ public partial class Demo : ComponentBase
         if (snippet is null)
         {
             var resourceFullName = Type.FullName + ".razor";
+            snippet = await ReadResourceContent(resourceFullName);
 
-            using (var stream = Type.Assembly.GetManifestResourceStream(resourceFullName)!)
+            var resourceHtmlFullName = Type.FullName + "_Html.razor";
+            snippetHtml = await ReadResourceContent(resourceHtmlFullName);
+        }
+    }
+
+    private async Task<string> ReadResourceContent(string resourceFullName)
+    {
+        using (var stream = Type.Assembly.GetManifestResourceStream(resourceFullName)!)
+        {
+            try
             {
-                try
-                {
-                    if (stream is null)
-                        return;
+                if (stream is null)
+                    return string.Empty;
 
-                    using (var reader = new StreamReader(stream))
-                    {
-                        snippet = await reader.ReadToEndAsync();
-                    }
-                }
-                catch (Exception ex)
+                using (var reader = new StreamReader(stream))
                 {
-                    Console.WriteLine(ex.Message);
+                    return await reader.ReadToEndAsync();
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return string.Empty;
             }
         }
     }

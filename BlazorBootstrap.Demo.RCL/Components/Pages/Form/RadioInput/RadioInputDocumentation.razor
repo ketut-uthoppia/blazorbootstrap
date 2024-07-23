@@ -1,0 +1,32 @@
+﻿@page "/radio-input"
+@page "/form/radio-input"
+
+<PageTitle>@title</PageTitle>
+
+<MetaTags PageUrl="@pageUrl" Title="@title" Description="@description" ImageUrl="@imageUrl" />
+
+<h1>Blazor Radio Input</h1>
+<div class="lead mb-3">
+    Blazor Bootstrap <code>RadioInput</code> component is built around HTML input of <code>type="radio"</code> that allows the user to select a single selection from a list of options.
+</div>
+
+<CarbonAds />
+
+<SectionHeading Size="HeadingSize.H2" Text="Basic usage" PageUrl="@pageUrl" HashTagName="basic-usage" />
+<Demo Type="typeof(RadioInput_Demo_01_Basic_Usage)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="Disabled" PageUrl="@pageUrl" HashTagName="disabled" />
+<Demo Type="typeof(RadioInput_Demo_02_Disabled)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="With help text" PageUrl="@pageUrl" HashTagName="with-help-text" />
+<Demo Type="typeof(RadioInput_Demo_03_With_HelpText)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="With validation" PageUrl="@pageUrl" HashTagName="with-validation" />
+<Demo Type="typeof(RadioInput_Demo_04_With_Validation)" Tabs="true" />
+
+@code {
+    private string pageUrl = "/form/radio-input";
+    private string title = "Blazor RadioInput Component";
+    private string description = "Blazor Bootstrap RadioInput component is built around HTML input of type=\"radio\" that allows the user to select a single selection from a list of options.";
+    private string imageUrl = "https://i.imgur.com/iUNBkki.png";
+}

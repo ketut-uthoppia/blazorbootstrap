@@ -1,8 +1,10 @@
 ﻿<div class="mb-3">
-    <DateInput @ref="dateInput"
-               TValue="DateOnly"
-               @bind-Value="@date1"
-               Placeholder="Enter Date" />
+    <label class="form-label">Date Only</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateOnly" @ref="dateInput" @bind-Value="@date1" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Entered date: @date1</div>
 

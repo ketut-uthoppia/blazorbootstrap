@@ -1,0 +1,83 @@
+﻿/* scrollbar */
+.v-scroll-auto {
+    overflow-y: auto !important;
+}
+
+.scroll-hidden {
+    overflow: hidden;
+}
+
+.bb-scrollbar {
+    scrollbar-color: rgba(0,0,0,.2) transparent;
+    scrollbar-color: rgba(0, 0, 0, .2) transparent;
+    scrollbar-width: thin
+}
+
+.bb-scrollbar.scroll-auto-hide {
+    scrollbar-color: transparent transparent
+}
+
+.bb-scrollbar.scroll-auto-hide:hover {
+    scrollbar-color: rgba(0,0,0,.2) transparent;
+    scrollbar-color: rgba(0, 0, 0, .2) transparent
+}
+
+.bb-scrollbar::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+}
+
+.bb-scrollbar::-webkit-scrollbar-thumb {
+    border: 6px solid transparent;
+    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    background-clip: padding-box
+}
+
+.bb-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.bb-scrollbar::-webkit-scrollbar-thumb:vertical {
+    min-height: 30px
+}
+
+.bb-scrollbar::-webkit-scrollbar-thumb:horizontal {
+    min-width: 30px
+}
+
+.bb-scrollbar.scroll-auto-hide::-webkit-scrollbar-thumb {
+    background: transparent;
+    background-clip: padding-box
+}
+
+.bb-scrollbar.scroll-auto-hide:hover::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
+    background-clip: padding-box
+}
+
+.bb-scrollbar::-webkit-scrollbar-thumb {
+    border: 6px solid transparent;
+    background: rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+
+.bb-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,.3);
+    background: rgba(0, 0, 0, .3);
+    background-clip: padding-box;
+    border: 4px solid transparent
+}
+
+.bb-scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+.bb-scrollbar-hidden::-webkit-scrollbar {
+    width: 0
+}

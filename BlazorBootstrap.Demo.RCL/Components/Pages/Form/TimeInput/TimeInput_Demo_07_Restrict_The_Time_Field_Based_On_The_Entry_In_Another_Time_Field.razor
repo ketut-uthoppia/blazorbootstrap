@@ -1,43 +1,37 @@
 ﻿@using System.ComponentModel.DataAnnotations
 
-<style>
-    .valid.modified:not([type=checkbox]) {
-        outline: 1px solid #26b050;
-    }
-
-    .invalid {
-        outline: 1px solid red;
-    }
-
-    .validation-message {
-        color: red;
-    }
-</style>
-
-<EditForm EditContext="@editContext" OnValidSubmit="HandleValidSubmit" novalidate>
+<EditForm EditContext="@editContext" OnInvalidSubmit="HandleInvalidSubmit" OnValidSubmit="HandleValidSubmit" class="@FormClass" novalidate>
     <DataAnnotationsValidator />
 
     <div class="form-group row mb-3">
         <label class="col-md-2 col-form-label">Departure Time: <span class="text-danger">*</span></label>
         <div class="col-md-10">
-            <TimeInput TValue="TimeOnly?"
-                       Value="flightForm.DepartureTime"
-                       ValueExpression="() => flightForm.DepartureTime"
-                       ValueChanged="(value) => DepartureTimeChanged(value)" />
-            <ValidationMessage For="@(() => flightForm.DepartureTime)" />
+            <div class="form-group">
+                <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+                <TimeInput TValue="TimeOnly?"
+                           Value="flightForm.DepartureTime"
+                           ValueExpression="() => flightForm.DepartureTime"
+                           ValueChanged="(value) => DepartureTimeChanged(value)" 
+                           onfocus="this.showPicker()" />
+                <ValidationMessage For="@(() => flightForm.DepartureTime)" class="invalid-feedback" />
+            </div>
         </div>
     </div>
 
     <div class="form-group row mb-3">
         <label class="col-md-2 col-form-label">Arrival Time: <span class="text-danger">*</span></label>
         <div class="col-md-10">
-            <TimeInput @ref="arrivalTimeInput" TValue="TimeOnly?"
-                       @bind-Value="flightForm.ArrivalTime"
-                       EnableMinMax="true"
-                       Min="arrivalMinTime"
-                       Max="arrivalMaxTime"
-                       Disabled="@disableArrivalTimeInput" />
-            <ValidationMessage For="@(() => flightForm.ArrivalTime)" />
+            <div class="form-group">
+                <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+                <TimeInput @ref="arrivalTimeInput" TValue="TimeOnly?"
+                           @bind-Value="flightForm.ArrivalTime"
+                           EnableMinMax="true"
+                           Min="arrivalMinTime"
+                           Max="arrivalMaxTime"
+                           Disabled="@disableArrivalTimeInput" 
+                           onfocus="this.showPicker()" />
+                <ValidationMessage For="@(() => flightForm.ArrivalTime)" class="invalid-feedback" />
+            </div>
         </div>
     </div>
 
@@ -58,6 +52,15 @@
 
     private TimeOnly? arrivalMinTime;
     private TimeOnly? arrivalMaxTime;
+
+    private bool isPristineForm = true;
+    private string FormClass
+    {
+        get
+        {
+            return isPristineForm ? "needs-validation" : "needs-validation was-validated";
+        }
+    }
 
     [Inject] ToastService ToastService { get; set; } = default!;
 
@@ -89,6 +92,8 @@
 
     public void HandleValidSubmit()
     {
+        isPristineForm = false;
+
         var toastMessage = new ToastMessage
         (
             type: ToastType.Success,
@@ -101,8 +106,14 @@
         ToastService.Notify(toastMessage);
     }
 
+    public void HandleInvalidSubmit()
+    {
+        isPristineForm = false;
+    }
+
     private void ResetForm()
     {
+        isPristineForm = true;
         flightForm = new();
         editContext = new EditContext(flightForm);
     }

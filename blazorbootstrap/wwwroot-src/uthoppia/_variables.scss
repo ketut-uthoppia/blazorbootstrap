@@ -1,0 +1,315 @@
+﻿// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white: #ffffff;
+$gray-25: #fcfcfd;
+$gray-50: #f9fafb;
+$gray-100: #f2f4f7;
+$gray-200: #e4e7ec;
+$gray-300: #d0d5dd;
+$gray-400: #98a2b3;
+$gray-500: #667085;
+$gray-600: #475467;
+$gray-700: #344054;
+$gray-800: #1d2939;
+$gray-900: #101828;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+    "25": $gray-25, 
+    "50": $gray-50, 
+    "100": $gray-100, 
+    "200": $gray-200, 
+    "300": $gray-300, 
+    "400": $gray-400, 
+    "500": $gray-500, 
+    "600": $gray-600, 
+    "700": $gray-700, 
+    "800": $gray-800, 
+    "900": $gray-900 
+);
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start brand-color-variables
+$brand-25: #f6fff5;
+$brand-50: #e5f9e3;
+$brand-100: #cbf2c9;
+$brand-200: #9be595;
+$brand-300: #6dd966;
+$brand-400: #43cc40;
+$brand-500: #34a624;
+$brand-600: #0d7419;
+$brand-700: #0b6616;
+$brand-800: #0a5913;
+$brand-900: #074222;
+// scss-docs-end brand-color-variables
+
+// fusv-disable
+// scss-docs-start brand-colors-map
+$brands: (
+    "brand-25": $brand-25, 
+    "brand-50": $brand-50, 
+    "brand-100": $brand-100, 
+    "brand-200": $brand-200, 
+    "brand-300": $brand-300, 
+    "brand-400": $brand-400, 
+    "brand-500": $brand-500, 
+    "brand-600": $brand-600, 
+    "brand-700": $brand-700, 
+    "brand-800": $brand-800, 
+    "brand-900": $brand-900 
+);
+// scss-docs-end brand-colors-map
+// fusv-enable
+
+// scss-docs-start error-color-variables
+$error-25: #fffbfa;
+$error-50: #fef3f2;
+$error-100: #fee4e2;
+$error-200: #fecdca;
+$error-300: #fda29b;
+$error-400: #f97066;
+$error-500: #f04438;
+$error-600: #d92d20;
+$error-700: #b42318;
+$error-800: #912018;
+$error-900: #7a271a;
+// scss-docs-end brand-color-variables
+
+// fusv-disable
+// scss-docs-start error-colors-map
+$errors: (
+    "error-25": $error-25, 
+    "error-50": $error-50, 
+    "error-100": $error-100, 
+    "error-200": $error-200, 
+    "error-300": $error-300, 
+    "error-400": $error-400, 
+    "error-500": $error-500, 
+    "error-600": $error-600, 
+    "error-700": $error-700, 
+    "error-800": $error-800, 
+    "error-900": $error-900 
+);
+// scss-docs-end error-colors-map
+// fusv-enable
+
+// scss-docs-start warning-color-variables
+$warning-25: #fffcf5;
+$warning-50: #fffaeb;
+$warning-100: #fef0c7;
+$warning-200: #fedf89;
+$warning-300: #fec84b;
+$warning-400: #fdb022;
+$warning-500: #f79009;
+$warning-600: #dc6803;
+$warning-700: #b54708;
+$warning-800: #93370d;
+$warning-900: #7a2e0e;
+// scss-docs-end warning-color-variables
+
+// fusv-disable
+// scss-docs-start warning-colors-map
+$warnings: (
+    "warning-25": $warning-25, 
+    "warning-50": $warning-50, 
+    "warning-100": $warning-100, 
+    "warning-200": $warning-200, 
+    "warning-300": $warning-300, 
+    "warning-400": $warning-400, 
+    "warning-500": $warning-500, 
+    "warning-600": $warning-600, 
+    "warning-700": $warning-700, 
+    "warning-800": $warning-800, 
+    "warning-900": $warning-900 
+);
+// scss-docs-end warning-colors-map
+// fusv-enable
+
+// scss-docs-start success-color-variables
+$success-25: #f6fef9;
+$success-50: #ecfdf3;
+$success-100: #d1fadf;
+$success-200: #a6f4c5;
+$success-300: #6ce9a6;
+$success-400: #32d583;
+$success-500: #12b76a;
+$success-600: #039855;
+$success-700: #027a48;
+$success-800: #05603a;
+$success-900: #054f31;
+// scss-docs-end success-color-variables
+
+// fusv-disable
+// scss-docs-start success-colors-map
+$successes: (
+    "success-25": $success-25, 
+    "success-50": $success-50, 
+    "success-100": $success-100, 
+    "success-200": $success-200, 
+    "success-300": $success-300, 
+    "success-400": $success-400, 
+    "success-500": $success-500, 
+    "success-600": $success-600, 
+    "success-700": $success-700, 
+    "success-800": $success-800, 
+    "success-900": $success-900 
+);
+// scss-docs-end success-colors-map
+// fusv-enable
+
+// scss-docs-start theme-color-variables
+$primary: $brand-500;
+$secondary: $brand-50;
+$success: $brand-500;
+$info: $white;
+$warning: $error-50;
+$danger: $error-600;
+$light: $gray-100;
+$dark: $gray-900;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $white,
+  "dark":       $white
+) !default;
+// scss-docs-end theme-colors-map
+
+$prefix: bs-;
+
+$link-decoration: none;
+$link-hover-color: $brand-800;
+
+$border-radius: 8px;
+$border-radius-sm: 8px;
+$border-radius-lg: 8px;
+$border-radius-xl: 8px;
+$border-radius-xxl: 8px;
+
+// scss-docs-start focus-ring-variables
+$focus-ring-width: .25rem;
+$focus-ring-opacity: .25;
+$focus-ring-color: rgba($primary, $focus-ring-opacity);
+$focus-ring-blur: 0;
+$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+// scss-docs-end focus-ring-variables
+
+$input-btn-padding-y: 10px;
+$input-btn-padding-x: 16px;
+$input-btn-font-size: 16px;
+
+$input-btn-padding-y-sm: 8px;
+$input-btn-padding-x-sm: 14px;
+$input-btn-font-size-sm: 14px;
+
+$input-btn-padding-y-lg: 10px;
+$input-btn-padding-x-lg: 18px;
+$input-btn-font-size-lg: 16px;
+
+$input-btn-padding-y-xl: 12px;
+$input-btn-padding-x-xl: 20px;
+$input-btn-font-size-xl: 16px;
+
+$input-btn-focus-width: $focus-ring-width;
+$input-btn-focus-color-opacity: $focus-ring-opacity;
+$input-btn-focus-color: $focus-ring-color;
+$input-btn-focus-blur: $focus-ring-blur;
+$input-btn-focus-box-shadow: $focus-ring-box-shadow;
+
+$font-family-nunito-sans: "Nunito Sans", sans-serif;
+$font-family-gabarito: "Gabarito", sans-serif;
+$font-family-base: var(--#{$prefix}font-nunito-sans);
+
+$font-size-root: 14px;
+
+$input-btn-font-family: $font-family-nunito-sans;
+$btn-font-weight: 700;
+
+$component-active-bg: $primary;
+
+// scss-docs-start form-label-variables
+$form-label-font-size: 14px;
+$form-label-font-style: normal;
+$form-label-font-weight: 700;
+$form-label-color: $gray-700;
+$form-label-line-height: 20px;
+// scss-docs-end form-label-variables
+
+$form-check-input-checked-color: $primary;
+$form-check-input-checked-bg-color: $brand-50;
+$form-check-input-checked-border-color: $primary;
+
+$input-bg: var(--#{$prefix}body-bg);
+
+$input-padding-x: 14px;
+$input-border-radius: 8px;
+$input-color: $gray-900;
+$input-disabled-color: $gray-500;
+$input-disabled-bg: $gray-50;
+
+$input-focus-bg: $input-bg;
+$input-focus-border-color: tint-color($component-active-bg, 50%);
+$input-focus-color: $input-color;
+$input-focus-width: $input-btn-focus-width;
+$input-focus-box-shadow: $input-btn-focus-box-shadow;
+
+// scss-docs-start form-text-variables
+$form-text-margin-top: .25rem;
+$form-text-font-size: 16px;
+$form-text-font-style: normal;
+$form-text-font-weight: 400;
+$form-text-color: $gray-500;
+// scss-docs-end form-text-variables
+
+$spinner-width: 20px;
+$spinner-height: 20px;
+
+$spinner-width-sm: 20px;
+$spinner-height-sm: 20px;
+
+// Form validation
+
+// scss-docs-start form-feedback-variables
+$form-feedback-margin-top: $form-text-margin-top;
+$form-feedback-font-size: $form-text-font-size;
+$form-feedback-font-style: $form-text-font-style;
+$form-feedback-invalid-color: $danger;
+
+$form-feedback-icon-invalid-color: $form-feedback-invalid-color;
+$form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='#{$form-feedback-icon-invalid-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-alert-circle'><circle cx='12' cy='12' r='10'></circle><line x1='12' y1='8' x2='12' y2='12'></line><line x1='12' y1='16' x2='12.01' y2='16'></line></svg>");
+// scss-docs-end form-feedback-variables
+// scss-docs-start form-validation-colors
+$form-invalid-color: $form-feedback-invalid-color;
+$form-invalid-border-color: $form-feedback-invalid-color;
+// scss-docs-end form-validation-colors
+
+$form-check-input-width: 1.15em;
+$form-check-margin-bottom: 16px;
+
+// scss-docs-start form-validation-states
+$form-validation-states: (
+  "invalid": (
+    "color": var(--#{$prefix}form-invalid-color),
+    "icon": $form-feedback-icon-invalid,
+    "tooltip-color": #fff,
+    "tooltip-bg-color": var(--#{$prefix}danger),
+    "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
+    "border-color": var(--#{$prefix}form-invalid-border-color),
+  )
+);
+// scss-docs-end form-validation-states

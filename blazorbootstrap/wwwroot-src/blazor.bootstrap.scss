@@ -1,0 +1,95 @@
+﻿@import 'blazor.bootstrap/variables.scss';
+
+:root {
+    /* preload */
+    --bb-preload-modal-z-index: #{$bb-preload-modal-z-index};
+    --bb-preload-modal-backdrop-z-index: #{$bb-preload-modal-backdrop-z-index};
+    /* confirm dialog */
+    --bb-confirm-dialog-z-index: #{$bb-confirm-dialog-z-index};
+    --bb-confirm-dialog-backdrop-z-index: #{$bb-confirm-dialog-backdrop-z-index};
+    /* offcanvas */
+    --bb-offcanvas-close-icon-font-size: #{$bb-offcanvas-close-icon-font-size};
+    --bb-offcanvas-footer-padding-y: #{$bb-offcanvas-footer-padding-y};
+    --bb-offcanvas-footer-padding-x: #{$bb-offcanvas-footer-padding-x};
+    --bb-offcanvas-horizontal-width-sm: #{$bb-offcanvas-horizontal-width-sm};
+    --bb-offcanvas-horizontal-width-lg: #{$bb-offcanvas-horizontal-width-lg};
+    /* sidebar */
+    --bb-violet: #{$bb-violet};
+    --bb-sidebar-width: #{$bb-sidebar-width};
+    --bb-sidebar-collapsed-width: #{$bb-sidebar-collapsed-width};
+    --bb-sidebar-background-color: #{$bb-sidebar-background-color};
+    --bb-sidebar-top-row-background-color: #{$bb-sidebar-top-row-background-color};
+    --bb-sidebar-top-row-border-color: #{$bb-sidebar-top-row-border-color};
+    --bb-sidebar-title-text-color: #{$bb-sidebar-title-text-color};
+    --bb-sidebar-brand-icon-color: #{$bb-sidebar-brand-icon-color};
+    --bb-sidebar-brand-image-width: #{$bb-sidebar-brand-image-width};
+    --bb-sidebar-brand-image-height: #{$bb-sidebar-brand-image-height};
+    --bb-sidebar-title-badge-text-color: #{$bb-sidebar-title-badge-text-color};
+    --bb-sidebar-title-badge-background-color: #{$bb-sidebar-title-badge-background-color};
+    --bb-sidebar-navbar-toggler-icon-color: #{$bb-sidebar-navbar-toggler-icon-color};
+    --bb-sidebar-navbar-toggler-background-color: #{$bb-sidebar-navbar-toggler-background-color};
+    --bb-sidebar-content-border-color: #{$bb-sidebar-content-border-color};
+    --bb-sidebar-nav-item-text-color: #{$bb-sidebar-nav-item-text-color};
+    --bb-sidebar-nav-item-text-active-color-rgb: #{$bb-sidebar-nav-item-text-active-color-rgb};
+    --bb-sidebar-nav-item-text-hover-color: #{$bb-sidebar-nav-item-text-hover-color};
+    --bb-sidebar-nav-item-text-active-color: #{$bb-sidebar-nav-item-text-active-color};
+    --bb-sidebar-nav-item-background-hover-color: #{$bb-sidebar-nav-item-background-hover-color};
+    --bb-sidebar-nav-item-group-background-color: #{$bb-sidebar-nav-item-group-background-color};
+    /* custom tooltip */
+    --bb-tooltip-primary: #{$bb-tooltip-primary};
+    --bb-tooltip-secondary: #{$bb-tooltip-secondary};
+    --bb-tooltip-success: #{$bb-tooltip-success};
+    --bb-tooltip-danger: #{$bb-tooltip-danger};
+    --bb-tooltip-warning: #{$bb-tooltip-warning};
+    --bb-tooltip-info: #{$bb-tooltip-info};
+    --bb-tooltip-light: #{$bb-tooltip-light};
+    --bb-tooltip-dark: #{$bb-tooltip-dark};
+    --bb-tooltip-color-white: #{$bb-tooltip-color-white};
+    --bb-tooltip-color-dark: #{$bb-tooltip-color-dark};
+    /* border */
+    --bs-border-radius-xs: #{$bs-border-radius-xs};
+    --bs-border-radius-md: #{$bs-border-radius-md};
+    /* table */
+    --bb-table-sticky-background-color: #{$bb-table-sticky-background-color};
+    --bb-table-freeze-column-background-color: #{$bb-table-freeze-column-background-color};
+    --bb-table-selected-row-color: #{$bb-table-selected-row-color};
+    --bb-table-selected-row-hover-color: #{$bb-table-selected-row-hover-color};
+    --bb-table-selected-row-background-color: #{$bb-table-selected-row-background-color};
+    --bb-table-selected-row-hover-background-color: #{$bb-table-selected-row-hover-background-color};
+    /* callout */
+    --bb-callout-link: #{$bb-callout-link};
+    --bb-callout-code-color: #{$bb-callout-code-color};
+    /* sidebar2 */
+    --bb-sidebar2-width: #{$bb-sidebar2-width};
+    --bb-sidebar2-collapsed-width: #{$bb-sidebar2-collapsed-width};
+    --bb-sidebar2-background-color: #{$bb-sidebar2-background-color};
+    --bb-sidebar2-top-row-background-color: #{$bb-sidebar2-top-row-background-color};
+    --bb-sidebar2-top-row-border-color: #{$bb-sidebar2-top-row-border-color};
+    --bb-sidebar2-title-text-color: #{$bb-sidebar2-title-text-color};
+    --bb-sidebar2-brand-icon-color: #{$bb-sidebar2-brand-icon-color};
+    --bb-sidebar2-brand-image-width: #{$bb-sidebar2-brand-image-width};
+    --bb-sidebar2-brand-image-height: #{$bb-sidebar2-brand-image-height};
+    --bb-sidebar2-title-badge-text-color: #{$bb-sidebar2-title-badge-text-color};
+    --bb-sidebar2-title-badge-background-color: #{$bb-sidebar2-title-badge-background-color};
+    --bb-sidebar2-navbar-toggler-icon-color: #{$bb-sidebar2-navbar-toggler-icon-color};
+    --bb-sidebar2-navbar-toggler-background-color: #{$bb-sidebar2-navbar-toggler-background-color};
+    --bb-sidebar2-content-border-color: #{$bb-sidebar2-content-border-color};
+    --bb-sidebar2-nav-item-text-color: #{$bb-sidebar2-nav-item-text-color};
+    --bb-sidebar2-nav-item-text-active-color-rgb: #{$bb-sidebar2-nav-item-text-active-color-rgb};
+    --bb-sidebar2-nav-item-text-hover-color: #{$bb-sidebar2-nav-item-text-hover-color};
+    --bb-sidebar2-nav-item-text-active-color: #{$bb-sidebar2-nav-item-text-active-color};
+    --bb-sidebar2-nav-item-background-hover-color: #{$bb-sidebar2-nav-item-background-hover-color};
+    --bb-sidebar2-nav-item-group-background-color: #{$bb-sidebar2-nav-item-group-background-color};
+}
+
+@import 'blazor.bootstrap/modal';
+@import 'blazor.bootstrap/offcanvas';
+@import 'blazor.bootstrap/table';
+@import 'blazor.bootstrap/detail-view';
+@import 'blazor.bootstrap/scrollbar';
+@import 'blazor.bootstrap/layout/layout';
+@import 'blazor.bootstrap/tooltip';
+@import 'blazor.bootstrap/button';
+@import 'blazor.bootstrap/spinner';
+@import 'blazor.bootstrap/form/range';
+@import 'blazor.bootstrap/pdf-viewer';

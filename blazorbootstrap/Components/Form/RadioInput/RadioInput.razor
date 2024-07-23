@@ -1,0 +1,27 @@
+﻿@namespace BlazorBootstrap
+@inherits BlazorBootstrapComponentBase
+@typeparam TValue
+
+<div class="@ClassNames @fieldCssClasses" style="@StyleNames">
+    <input 
+        @ref="@Element"
+        type="radio"
+        class="form-check-input"  
+        name="@Name" 
+        id="@Id" 
+        value="@Value"
+        disabled="@Disabled"
+        checked="@Checked"
+        @onchange="OnChange"
+    >
+    @if (!string.IsNullOrEmpty(Label))
+    {
+        <label class="form-check-label" for="@Id">
+            @Label
+            @if(!string.IsNullOrEmpty(HelpText))
+            {
+                <span>@HelpText</span>
+            }
+        </label>
+    }
+</div>

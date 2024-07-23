@@ -1,5 +1,10 @@
 ﻿<div class="mb-3">
-    <DateInput TValue="DateOnly" Value="date1" ValueExpression="() => date1" ValueChanged="(value) => DateChanged(value)" />
+    <label class="form-label">Date</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Calendar" Class="form-icon" />
+        <DateInput TValue="DateOnly" Value="@date1" ValueExpression="() => date1" ValueChanged="(value) => DateChanged(value)" Placeholder="Enter Date" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Changed date: @date1</div>
 

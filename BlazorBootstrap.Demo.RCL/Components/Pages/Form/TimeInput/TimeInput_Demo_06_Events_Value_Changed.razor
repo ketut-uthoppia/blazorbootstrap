@@ -1,5 +1,10 @@
 ﻿<div class="mb-3">
-    <TimeInput TValue="TimeOnly" Value="time1" ValueExpression="() => time1" ValueChanged="(value) => TimeChanged(value)" />
+    <label class="form-label">Time</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+        <TimeInput TValue="TimeOnly" Value="time1" ValueExpression="() => time1" ValueChanged="(value) => TimeChanged(value)" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Changed time: @time1</div>
 

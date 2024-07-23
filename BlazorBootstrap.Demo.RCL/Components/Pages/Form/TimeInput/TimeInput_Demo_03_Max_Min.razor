@@ -1,18 +1,22 @@
 ﻿<div class="mb-3">
-    <strong>TimeOnly</strong>:
-</div>
-<div class="mb-3">
-    <TimeInput TValue="TimeOnly" @bind-Value="@time1" EnableMinMax="true" Min="@min1" Max="@max1" />
+    <label class="form-label">Time Only</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+        <TimeInput TValue="TimeOnly" @bind-Value="@time1" EnableMinMax="true" Min="@min1" Max="@max1" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Min time: @min1</div>
 <div class="mb-3">Max time: @max1</div>
 <div class="mb-3">Entered time: @time1</div>
 
 <div class="mb-3">
-    <strong>TimeOnly?</strong>:
-</div>
-<div class="mb-3">
-    <TimeInput TValue="TimeOnly?" @bind-Value="@time2" EnableMinMax="true" Min="@min2" Max="@max2" />
+    <label class="form-label">Time Only Nullable</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+        <TimeInput TValue="TimeOnly?" @bind-Value="@time2" EnableMinMax="true" Min="@min2" Max="@max2" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Min time: @min2</div>
 <div class="mb-3">Max time: @max2</div>

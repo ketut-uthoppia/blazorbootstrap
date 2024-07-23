@@ -1,8 +1,13 @@
 ﻿<div class="mb-3">
-    <TimeInput TValue="TimeOnly" @bind-Value="@date1" />
+    <label class="form-label">Time</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+        <TimeInput TValue="TimeOnly" @bind-Value="@time1" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
-<div class="mb-3">Entered date: @date1</div>
+<div class="mb-3">Entered date: @time1</div>
 
 @code {
-    private TimeOnly date1 = new TimeOnly(13, 14);
+    private TimeOnly time1 = new TimeOnly(13, 14);
 }

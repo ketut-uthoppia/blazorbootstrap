@@ -2,7 +2,7 @@
 
   <PropertyGroup>
 
-    <PackageId>Blazor.Bootstrap</PackageId>
+    <PackageId>Utp.Mmc.Blazor.Bootstrap</PackageId>
     <Version>3.0.0-preview.2</Version>
     <PackageVersion>3.0.0-preview.2</PackageVersion>
 
@@ -30,6 +30,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\nuget\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -38,6 +42,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Include="compilerconfig.json" />
   </ItemGroup>
 
   <ItemGroup>

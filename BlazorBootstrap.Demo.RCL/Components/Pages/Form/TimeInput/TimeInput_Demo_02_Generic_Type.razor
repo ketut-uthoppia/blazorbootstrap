@@ -1,16 +1,20 @@
 ﻿<div class="mb-3">
-    <strong>TimeOnly</strong>:
-</div>
-<div class="mb-3">
-    <TimeInput TValue="TimeOnly" @bind-Value="@time1" />
+    <label class="form-label">Time Only</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+        <TimeInput TValue="TimeOnly" @bind-Value="@time1" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Entered time: @time1</div>
 
 <div class="mb-3">
-    <strong>TimeOnly?</strong>:
-</div>
-<div class="mb-3">
-    <TimeInput TValue="TimeOnly?" @bind-Value="@time2" />
+    <label class="form-label">Time Only Nullable</label>
+    <div class="form-group">
+        <FeatherIcon Name="FeatherIconName.Clock" Class="form-icon" />
+        <TimeInput TValue="TimeOnly?" @bind-Value="@time2" onfocus="this.showPicker()" />
+        <div class="form-hint">This is a hint text to help user.</div>
+    </div>
 </div>
 <div class="mb-3">Entered time: @time2</div>
 

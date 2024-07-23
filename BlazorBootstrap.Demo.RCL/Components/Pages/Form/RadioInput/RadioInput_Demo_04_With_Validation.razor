@@ -1,0 +1,78 @@
+﻿@using System.ComponentModel.DataAnnotations
+
+<EditForm EditContext="@editContext" OnInvalidSubmit="HandleInvalidSubmit" OnValidSubmit="HandleValidSubmit" class="@FormClass" novalidate>
+    <DataAnnotationsValidator />
+
+    <div class="mb-3">
+        <label class="form-label">Choose Fruits</label>
+        <RadioInput TValue="string" Name="fruit" Value="1" Label="Banana" HelpText="A fruit that taste good" ValueExpression="() => fruitForm.SelectedFruit" OnChangeCallback="HandleOnChangeCallback" />
+        <RadioInput TValue="string" Name="fruit" Value="2" Label="Orange" HelpText="A fruit that is full of vitamin C" ValueExpression="() => fruitForm.SelectedFruit" OnChangeCallback="HandleOnChangeCallback" />
+        <RadioInput TValue="string" Name="fruit" Value="3" Label="Grape" HelpText="A fruit that can make you drunk" ValueExpression="() => fruitForm.SelectedFruit" OnChangeCallback="HandleOnChangeCallback" />
+        <RadioInput TValue="string" Name="fruit" Value="4" Label="Papaya" HelpText="Nice to eat when you have constipation" ValueExpression="() => fruitForm.SelectedFruit" OnChangeCallback="HandleOnChangeCallback" />
+        <ValidationMessage For="@(() => fruitForm.SelectedFruit)" class="invalid-feedback" />
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <Button Type="ButtonType.Button" Color="ButtonColor.Secondary" Class="float-end" @onclick="ResetForm">Reset</Button>
+            <Button Type="ButtonType.Submit" Color="ButtonColor.Success" Class="float-end me-2">Submit</Button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private FruitForm fruitForm = new();
+    private EditContext? editContext;
+    private bool isPristineForm = true;
+    private string FormClass
+    {
+        get
+        {
+            return isPristineForm ? "needs-validation" : "needs-validation was-validated";
+        }
+    }
+    [Inject] ToastService ToastService { get; set; } = default!;
+
+    protected override void OnInitialized()
+    {
+        editContext = new EditContext(fruitForm);
+        base.OnInitialized();
+    }
+
+    public void HandleValidSubmit()
+    {
+        isPristineForm = false;
+        var toastMessage = new ToastMessage
+        (
+            type: ToastType.Success,
+            iconName: IconName.Check2All,
+            title: "Success!",
+            helpText: $"{DateTime.Now.ToLocalTime()}",
+            message: "Fruit juice is created."
+        );
+        ToastService.Notify(toastMessage);
+    }
+
+    public void HandleInvalidSubmit()
+    {
+        isPristineForm = false;
+    }
+
+    public void HandleOnChangeCallback(object selectedValue)
+    {
+        fruitForm.SelectedFruit = selectedValue.ToString();
+    }
+
+    private void ResetForm()
+    {
+        isPristineForm = true;
+        fruitForm = new();
+        editContext = new EditContext(fruitForm);
+    }
+
+    public class FruitForm
+    {
+        [Required(ErrorMessage = "Select a fruit to proceed.")]
+        public string? SelectedFruit { get; set; }
+    }
+}

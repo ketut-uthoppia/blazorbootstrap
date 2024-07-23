@@ -1,0 +1,38 @@
+﻿@page "/email-input"
+@page "/form/email-input"
+
+<PageTitle>@title</PageTitle>
+
+<MetaTags PageUrl="@pageUrl" Title="@title" Description="@description" ImageUrl="@imageUrl" />
+
+<h1>Blazor Email Input</h1>
+<div class="lead mb-3">
+    Blazor Bootstrap <code>EmailInput</code> component is built around HTML input of <code>type="email"</code> that allows the user to input email based value.
+</div>
+
+<CarbonAds />
+
+<SectionHeading Size="HeadingSize.H2" Text="Basic usage" PageUrl="@pageUrl" HashTagName="basic-usage" />
+<Demo Type="typeof(EmailInput_Demo_01_Basic_Usage)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="Disabled" PageUrl="@pageUrl" HashTagName="disabled" />
+<Demo Type="typeof(EmailInput_Demo_02_Disabled)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="With label and hint" PageUrl="@pageUrl" HashTagName="with-label-and-hint" />
+<Demo Type="typeof(EmailInput_Demo_03_With_Label_And_Hint)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="With icon" PageUrl="@pageUrl" HashTagName="with-icon" />
+<Demo Type="typeof(EmailInput_Demo_04_With_Icon)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="With help tooltip" PageUrl="@pageUrl" HashTagName="with-helptooltip" />
+<Demo Type="typeof(EmailInput_Demo_05_With_HelpTooltip)" Tabs="true" />
+
+<SectionHeading Size="HeadingSize.H2" Text="With validation" PageUrl="@pageUrl" HashTagName="with-validation" />
+<Demo Type="typeof(EmailInput_Demo_06_With_Validation)" Tabs="true" />
+
+@code {
+    private string pageUrl = "/form/email-input";
+    private string title = "Blazor EmailInput Component";
+    private string description = "Blazor Bootstrap EmailInput component is built around HTML input of type=\"email\" that allows the user to input email based value.";
+    private string imageUrl = "https://i.imgur.com/iUNBkki.png";
+}

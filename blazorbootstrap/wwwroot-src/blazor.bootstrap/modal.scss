@@ -1,0 +1,22 @@
+﻿/* preload */
+.modal-page-loading {
+    z-index: var(--bb-preload-modal-z-index) !important;
+}
+
+.modal-backdrop-page-loading {
+    z-index: var(--bb-preload-modal-backdrop-z-index) !important;
+}
+
+.modal-content-page-loading {
+    background-color: inherit !important;
+    border: inherit !important;
+}
+
+/* confirm dialog */
+.modal-confirmation {
+    z-index: var(--bb-confirm-dialog-z-index) !important;
+}
+
+.modal-backdrop-confirmation {
+    z-index: var(--bb-confirm-dialog-backdrop-z-index) !important;
+}
